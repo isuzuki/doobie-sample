@@ -20,5 +20,6 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  "com.github.pureconfig" %% "pureconfig" % "0.9.1",
+  "org.scalatest"         %% "scalatest"  % "3.0.5"  % "test"
 )
