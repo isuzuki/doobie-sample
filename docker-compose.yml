@@ -7,7 +7,7 @@ services:
     ports:
       - '3306:3306'
     environment:
-      MYSQL_USER: 'doobie-user'
-      MYSQL_PASSWORD: 'doobie-pass'
-      MYSQL_DATABASE: 'doobie-sample'
+      MYSQL_USER: 'doobie_user'
+      MYSQL_PASSWORD: 'doobie_pass'
+      MYSQL_DATABASE: 'doobie_sample'
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
