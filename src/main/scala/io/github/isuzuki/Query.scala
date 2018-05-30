@@ -11,9 +11,9 @@ object Query {
         CREATE TABLE IF NOT EXISTS item (
           id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
           name VARCHAR(255) NOT NULL UNIQUE KEY,
-          created_at TIMESTAMP NOT NULL,
-          updated_at TIMESTAMP NOT NULL,
-          deleted_at TIMESTAMP DEFAULT NULL
+          created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+          deleted_at TIMESTAMP NULL DEFAULT NULL
         )
       """.update.run
 
