@@ -9,6 +9,18 @@ sudo: required
 jdk:
   - oraclejdk8
 
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+
+before_install:
+  - mysql -e 'create database doobie_sample;'
+  - cp src/test/resources/ci.conf src/test/resources/application.conf
+
 script:
   - sbt clean coverage test coverageReport
 

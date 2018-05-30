@@ -19,6 +19,12 @@ scalacOptions ++= Seq(
   "-Yno-adapted-args"
 )
 
+val doobieVersion = "0.5.3"
+
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  "com.github.pureconfig" %% "pureconfig"           % "0.9.1",
+  "mysql"                 %  "mysql-connector-java" % "5.1.45",
+  "org.tpolecat"          %% "doobie-core"          % doobieVersion,
+  "org.scalatest"         %% "scalatest"            % "3.0.5"        % "test",
+  "org.tpolecat"          %% "doobie-scalatest"     % doobieVersion  % "test"
 )

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    container_name: 'scala_samples_db'
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_USER: 'doobie_user'
+      MYSQL_PASSWORD: 'doobie_pass'
+      MYSQL_DATABASE: 'doobie_sample'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
